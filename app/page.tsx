@@ -10,7 +10,7 @@ import { useSearchParams } from "next/navigation";
 export default function Home() {
   const searchParams = useSearchParams();
   const themeActive = searchParams.get("theme") || "default";
-  const cxLink = (theme) =>
+  const cxLink = (theme: string) =>
     theme === themeActive ? "font-bold underline" : "";
   return (
     <>
