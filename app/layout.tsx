@@ -14,7 +14,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         data-theme={theme}
-        className={`text-on-background h-screen flex flex-col justify-between p-lg bg-background`}
+        className={`text-on-background h-screen flex flex-col justify-between bg-background`}
       >
         {children}
       </body>
