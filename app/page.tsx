@@ -3,6 +3,7 @@ import { Button } from "@spark-ui/button";
 import { Checkbox } from "@spark-ui/checkbox";
 import { RadioGroup } from "@spark-ui/radio-group";
 import { Switch } from "@spark-ui/switch";
+import { Tag } from "@spark-ui/tag";
 
 import Link from "next/link";
 import { useSearchParams } from "next/navigation";
@@ -19,7 +20,10 @@ export default function Home() {
       </header>
       <main className="gap-md flex flex-wrap grow flex-row justify-evenly items-stretch mx-2xl">
         <div className="gap-md min-w-sz-320 flex flex-nowrap flex-col justify-center">
-          <h1 className="text-headline-1">Heading</h1>
+          <div className="inline-flex justify-between">
+            <h1 className="text-headline-1">Heading</h1>
+            <Tag intent="secondary">New</Tag>
+          </div>
           <div className="text-body-1">Some text here</div>
           <div className="gap-lg inline-flex items-center">
             <RadioGroup defaultValue="1">
