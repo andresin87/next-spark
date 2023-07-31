@@ -1,10 +1,10 @@
 const sparkPlugins = require("@spark-ui/tailwind-plugins");
 const themeUtils = require("@spark-ui/theme-utils");
 
-const lbcTheme = require("./theme/leboncoin/private.js");
-const lbcProTheme = require("./theme/leboncoin/pro.js");
-const subitoTheme = require("./theme/subito/default.js");
-const kleinanzeigenTheme = require("./theme/kleinanzeigen/default.js");
+const lbcTheme = require("./theme/leboncoin/light.js");
+// const lbcProTheme = require("./theme/leboncoin/pro.js");
+// const subitoTheme = require("./theme/subito/default.js");
+// const kleinanzeigenTheme = require("./theme/kleinanzeigen/default.js");
 
 /** @type {import('tailwindcss').Config} */
 module.exports = {
@@ -27,12 +27,14 @@ module.exports = {
     ...sparkPlugins.sparkConfig({
       htmlFontSize: 16, // replace this value with your app's base font size if needed (default: 16)
       themes: {
-        kleinanzeigen: kleinanzeigenTheme.defaultTheme,
-        leboncoin: lbcTheme.privateTheme,
-        "leboncoin-pro": lbcProTheme.proTheme,
         default: themeUtils.defaultTheme,
-        dark: themeUtils.defaultThemeDark,
-        subito: subitoTheme.defaultTheme,
+        // kleinanzeigen: kleinanzeigenTheme.defaultTheme,
+        ['leboncoin-light']: lbcTheme.privateTheme,
+        ['leboncoin-dark']: lbcTheme.privateTheme,
+        // "leboncoin-pro": lbcProTheme.proTheme,
+        ['spark-light']: themeUtils.defaultTheme,
+        ['spark-dark']: themeUtils.defaultThemeDark,
+        // subito: subitoTheme.defaultTheme,
       },
     }),
   ],

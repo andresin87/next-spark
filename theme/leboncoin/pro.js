@@ -1,6 +1,6 @@
 import { createTheme } from "@spark-ui/theme-utils";
 
-import { privateTheme } from "./private";
+import { privateTheme } from "./light.js";
 
 export const proTheme = createTheme({
   colors: {
